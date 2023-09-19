@@ -1,6 +1,6 @@
 {
   "name": "Activity Tracker PWA",
-  "short_name": "PWATracker",
+  "short_name": "Wavemakers",
   "start_url": "/index.html",
   "scope": ".",
   "display": "standalone",
