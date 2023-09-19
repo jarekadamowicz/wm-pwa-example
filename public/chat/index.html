@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chat Example</title>
+
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.indigo-pink.min.css"
+    />
+    <link rel="stylesheet" href="/src/css/help.css" />
+    <link rel="manifest" href="/app.webmanifest" />
+    <!-- <link rel="manifest" href="/manifest.json" /> -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-title" content="WM-PWA-app" />
+    <meta
+      name="apple-touch-icon"
+      href="/src/images/icons/app-con-144x144.png"
+      sizes="144x144"
+    />
+
+    <style>
+      /* Chat container */
+      .chat-container {
+        /* width: 300px; */
+        margin: 20px auto;
+        background-color: #f0f0f0;
+        padding: 10px;
+        border-radius: 15px;
+      }
+
+      /* Chat bubble */
+      .chat-bubble {
+        background-color: #2196f3;
+        color: #fff;
+        border-radius: 30px;
+        padding: 10px;
+        margin: 5px 0;
+        clear: both;
+        max-width: 70%;
+        font-size: small;
+      }
+
+      /* User message */
+      .user-message {
+        float: right;
+        /*background-color: #4caf50; */
+        background-color: #2196f3;
+      }
+
+      /* Bot message */
+      .bot-message {
+        float: left;
+        background-color: #4caf50;
+        /* background-color: #f44336; */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <!-- --------------------- NAV --------------------- -->
+      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+          <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">WM-PWA-app</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation. We hide it in small screens. -->
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+              <a class="mdl-navigation__link" href="/">Feed</a>
+              <a class="mdl-navigation__link" href="/settings">Settings</a>
+              <div class="drawer-option">
+                <button
+                  class="enable-notifications mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-color--accent"
+                >
+                  Enable Notifications
+                </button>
+              </div>
+            </nav>
+          </div>
+        </header>
+        <div class="mdl-layout__drawer">
+          <span class="mdl-layout-title">WM-PWA-app</span>
+          <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="/">Feed</a>
+            <a class="mdl-navigation__link" href="/help">Help</a>
+            <div class="drawer-option">
+              <button
+                class="enable-notifications mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-color--accent"
+              >
+                Enable Notifications
+              </button>
+            </div>
+          </nav>
+        </div>
+        <!-- <main class="mdl-layout__content mat-typography"> -->
+        <main class="mdl-layout__content">
+          <!-- --------------------- CHAT EXAMPLE --------------------- -->
+          <div class="chat-container">
+            <div class="chat-bubble bot-message">
+              Hi there! I'm a helpful Wave Makers bot. How can I help you ?
+            </div>
+            <div class="chat-bubble user-message">
+              Hi, I don't really know if you could help me...
+            </div>
+            <div class="chat-bubble bot-message">
+              Hello! I'm here to assist with a wide range of questions and
+              topics. Please feel free to ask anything you'd like, and I'll do
+              my best to provide you with helpful information or guidance. What
+              can I help you with today?
+            </div>
+            <div class="chat-bubble user-message">What can you do?</div>
+
+            <div class="chat-bubble bot-message">
+              I can help you with various topics including, but not limited to
+              self-awareness, mindfulness, personal development, mental health
+              and improving your leadership skills.
+            </div>
+
+            <div class="chat-bubble user-message">
+              Can you help me identify why I feel bad today?
+            </div>
+
+            <div class="chat-bubble bot-message">
+              <h4>Understanding Feelings of Discomfort</h4>
+              <h5>Why You Might Be Feeling Bad Today</h5>
+              <p>
+                I'd be happy to try and help you identify why you're feeling bad
+                today, but please keep in mind that I'm not a substitute for
+                professional mental health advice or diagnosis. Feelings of
+                sadness, stress, or discomfort can be caused by various factors,
+                and it's essential to consider your personal circumstances and
+                emotions.
+              </p>
+              <h5>Common Reasons for Feeling Bad:</h5>
+              <ol>
+                <li>
+                  <strong>Stress:</strong> High levels of stress from work,
+                  personal life, or other responsibilities can lead to feelings
+                  of unease or anxiety.
+                </li>
+                <li>
+                  <strong>Lack of Sleep:</strong> A poor night's sleep or
+                  ongoing sleep issues can significantly affect your mood.
+                </li>
+                <li>
+                  <strong>Emotional Triggers:</strong> Sometimes, specific
+                  events or memories can trigger negative emotions.
+                </li>
+                <li>
+                  <strong>Health Issues:</strong> Physical health problems or
+                  illness can impact your mood and energy levels.
+                </li>
+                <li>
+                  <strong>Relationship Problems:</strong> Difficulties in
+                  personal or professional relationships can cause emotional
+                  distress.
+                </li>
+                <li>
+                  <strong>Negative Self-Talk:</strong> Negative thoughts and
+                  self-criticism can contribute to feeling bad.
+                </li>
+                <li>
+                  <strong>Environmental Factors:</strong> The environment you're
+                  in, such as a cluttered space or unpleasant surroundings, can
+                  affect your mood.
+                </li>
+                <li>
+                  <strong>Changes in Routine:</strong> Disruptions to your daily
+                  routine or major life changes can lead to feelings of unease.
+                </li>
+                <li>
+                  <strong>Mental Health:</strong> Conditions like depression,
+                  anxiety, or other mental health issues can cause persistent
+                  negative emotions.
+                </li>
+              </ol>
+              <p>
+                To better understand why you're feeling bad today, consider
+                reflecting on your recent experiences, circumstances, and
+                emotions. It might be helpful to talk to someone you trust about
+                your feelings, whether it's a friend, family member, or a mental
+                health professional. They can provide support and guidance
+                tailored to your situation.
+              </p>
+              <p>
+                If your feelings persist or intensify and are affecting your
+                daily life, seeking the help of a mental health professional is
+                advisable. They can offer a more comprehensive assessment and
+                recommend appropriate interventions or treatment options.
+              </p>
+            </div>
+
+            <div class="chat-bubble user-message">
+              Wow! Thanks! I feel better already!
+            </div>
+
+            <div class="chat-bubble bot-message">
+              You're very welcome! I'm glad to hear that you found the
+              information helpful, and I hope you continue to feel better. If
+              you ever have more questions or need assistance with anything else
+              in the future, don't hesitate to reach out. Take care!
+            </div>
+          </div>
+          <!-- --------------------- CHAT EXAMPLE --------------------- -->
+        </main>
+      </div>
+    </div>
+    <!-- app -->
+
+    <script defer src="/src/js/material.min.js"></script>
+    <script src="/src/js/app.js"></script>
+  </body>
+</html>

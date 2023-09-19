@@ -7,22 +7,22 @@ var closeCreatePostModalButton = document.querySelector(
 function openCreatePostModal() {
   createPostArea.style.display = "block";
 
-  // show banner for install ?
-  if (deferredPrompt) {
-    deferredPrompt.prompt();
+  // // show banner for install ?
+  // if (deferredPrompt) {
+  //   deferredPrompt.prompt();
 
-    deferredPrompt.userChoice.then((choiceResult) => {
-      console.log(choiceResult.outcome);
+  //   deferredPrompt.userChoice.then((choiceResult) => {
+  //     console.log(choiceResult.outcome);
 
-      if (choiceResult.outcome === "dismissed") {
-        console.log("User cancelled installation");
-      } else {
-        console.log("User added the app to the home screen");
-      }
+  //     if (choiceResult.outcome === "dismissed") {
+  //       console.log("User cancelled installation");
+  //     } else {
+  //       console.log("User added the app to the home screen");
+  //     }
 
-      deferredPrompt = null;
-    });
-  }
+  //     deferredPrompt = null;
+  //   });
+  // }
 }
 
 function closeCreatePostModal() {
